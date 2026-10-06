@@ -1,0 +1,13 @@
+{
+  "name": "نماز من",
+  "short_name": "نماز من",
+  "description": "ثبت نمازها و کارهای روزانه و مشاهده کارنامه",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050d17",
+  "theme_color": "#07111e"
+}

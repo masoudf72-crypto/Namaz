@@ -3,8 +3,10 @@
 <head><meta name="theme-color" content="#07111e"><meta name="app-version" content="2026-10-08-v5">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="manifest" href="./manifest.webmanifest">
 <meta name="theme-color" content="#07101c">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <title>محاسبه</title>
 <style>
 :root{
@@ -272,6 +274,13 @@ function renderHabitReport(){
  document.getElementById('reportHabits').innerHTML=`<div class="monthlyWrap">${reportMonthHeader('کارهای روزانه')}<div class="tableScroll"><table class="reportTable"><thead><tr><th>تاریخ</th>${habits.map(h=>`<th>${h[0]}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>${summary}<div class="monthlyHint" style="margin-top:8px">سبز = انجام شده · قرمز = انجام نشده</div></div>`;
 }
 renderHome();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
